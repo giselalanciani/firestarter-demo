@@ -11,13 +11,13 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
-      <a mat-list-item routerLink="/login" (click)="drawer.close()">Login</a>
+      <a mat-list-item routerLink="/" (click)="drawer.close()">🏠 Home</a>
+      <a mat-list-item routerLink="/login" (click)="drawer.close()">🔑 Login</a>
       <a mat-list-item routerLink="/kanban" (click)="drawer.close()"
-        >Kanban Demo</a
+        >🍱 Kanban Demo</a
       >
       <a mat-list-item routerLink="/customers" (click)="drawer.close()"
-        >SSR Demo</a
+        >⚡ SSR Demo</a
       >
     </mat-nav-list>
   </mat-sidenav>
@@ -34,7 +34,7 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="logo" routerLink="/">🔥 Angular Firestarter</span>
+      <span class="logo" routerLink="/">🔥  Angular Firestarter</span>
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
@@ -64,5 +64,6 @@
 
     <!-- TRANSCLUSION -->
     <ng-content></ng-content>
+
   </mat-sidenav-content>
 </mat-sidenav-container>

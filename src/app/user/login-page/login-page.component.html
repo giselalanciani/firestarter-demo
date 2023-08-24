@@ -15,6 +15,11 @@
     <p>
       Logged in as <strong>{{ user.email }}</strong>
     </p>
+    <p>
+      Hola <strong>{{ user.displayName }}</strong>
+    </p>
+
+    <img [src]="user.photoURL" >
 
     <button mat-stroked-button (click)="afAuth.signOut()">Logout</button>
   </div>

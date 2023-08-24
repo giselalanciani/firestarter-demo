@@ -16,7 +16,7 @@ export type AuthTypeProp = 'login' | 'signup' | 'reset' ;
 export class EmailLoginComponent implements OnInit {
   form!: FormGroup;
 
-  type: AuthTypeProp = 'signup';
+  type: AuthTypeProp = 'login';
   loading = false;
 
   serverMessage: string  | unknown;
@@ -67,7 +67,13 @@ export class EmailLoginComponent implements OnInit {
     if (this.type !== 'signup') {
       return true;
     } else {
-      return this.password!.value === this.passwordConfirm!.value;
+      const doesMatch = this.password!.value === this.passwordConfirm!.value
+      if (doesMatch === true) {
+        this.passwordConfirm?.setErrors({
+          match: "no matchea"
+        })
+      }
+      return doesMatch;
     }
   }
 
