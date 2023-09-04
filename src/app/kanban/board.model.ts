@@ -1,7 +1,7 @@
 export interface Board {
   id?: string;
-  title?: string;
-  priority?: number;
+  title: string;
+  priority: number;
   tasks: Task[];
 }
 export interface Task {
