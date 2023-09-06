@@ -4,6 +4,7 @@ import { BoardService } from '../board.service';
 
 @Component({
   selector: 'app-task-dialog',
+  styleUrls: ["./dialog.scss"],
   template: `
     <h1 mat-dialog-title>Task</h1>
     <div mat-dialog-content class="content">
@@ -30,6 +31,10 @@ import { BoardService } from '../board.service';
       <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
         {{ data.isNew ? 'Add Task' : 'Update Task' }}
       </button>
+      <app-delete-button
+        (delete)="handleTaskDelete()"
+        *ngIf="!data.isNew"
+      ></app-delete-button>
     </div>
   `,
 
