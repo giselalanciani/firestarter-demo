@@ -1,6 +1,7 @@
 <mat-card class="outer-card">
   <mat-card-header>
     <!-- Slot for the handle -->
+
     <ng-content></ng-content>
     <mat-card-title>
       {{ board.title }}
@@ -29,4 +30,5 @@
     </button>
     <app-delete-button (delete)="handleDelete()"></app-delete-button>
   </div>
+
 </mat-card>

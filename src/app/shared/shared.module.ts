@@ -34,8 +34,6 @@ const modules = [
   MatInputModule,
   MatSnackBarModule,
   RouterModule,
-
-
 ];
 
 @NgModule({
@@ -47,3 +45,5 @@ const modules = [
   ]
 })
 export class SharedModule {}
+
+
